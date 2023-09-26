@@ -1,0 +1,239 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Global styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: pink;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+header .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header .menu {
+    list-style: none;
+    display: flex;
+}
+
+header .menu li {
+    margin-right: 20px;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header .menu a:hover {
+    color: orange;
+}
+
+header .visit-us {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+header .visit-us:hover {
+    background-color: pink;
+}
+
+/* Home section styles */
+#home {
+    height: 100vh;
+    position: relative;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#home h1 {
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    padding-top: 20%;
+}
+
+/* Objective section styles */
+#objective {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#objective .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#objective h2 {
+    font-size: 24px;
+    color: pink;
+    margin-bottom: 30px;
+}
+
+.objective-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-container {
+    flex: 1;
+    max-width: 100%;
+}
+
+.video-container video {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+.text-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 767px) {
+    header .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: pink;
+        z-index: 1000;
+    }
+
+    header .menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header .menu li:last-child {
+        margin-bottom: 0; /* Remove margin for the last menu item */
+    }
+
+    header .menu-toggle {
+        display: block; /* Show the menu toggle button */
+    }
+
+    /* Styles for expanded menu */
+    header .menu.expanded {
+        display: flex;
+        flex-direction: column;
+        background-color: pink;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    header .menu.expanded li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust other styles for smaller screens here */
+
+    /* Styles for smaller screens for the home section */
+    #home h1 {
+        font-size: 24px;
+        padding-top: 10%;
+    }
+
+    /* Styles for smaller screens for the objective section */
+    #objective .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container {
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        padding: 10px;
+    }
+
+    /* Add additional styles for smaller screens as needed */
+}
